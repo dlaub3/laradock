@@ -795,6 +795,8 @@ RUN php -v | head -n 1 | grep -q "PHP ${PHP_VERSION}."
 
 USER root
 
+RUN stty cols 300 rows 169
+
 # Clean up
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
